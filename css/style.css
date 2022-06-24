@@ -418,3 +418,33 @@ p, a {
 .last__box__right {
     padding: 98px 81px 64px 62px;
 }
+.pricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--base-color-bg);
+    width: 100%;
+    padding-top: 100px;
+}
+.pricing .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 1266px;
+    height: 616px;
+    border: 1px solid red;
+}
+.pricing__title {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-regular);
+}
+.pricing__container__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+.pricing__box {
+    width: 372px;
+    height: 461px;
+}
