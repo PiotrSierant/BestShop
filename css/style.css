@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 :root {
+    font-size: 10px;
     /*font*/
     font-family: Raleway, sans-serif;
     --font-family-2: 'Open Sans', sans-serif;
@@ -9,6 +10,7 @@
     --base-color-gray: #A5A5A5;
     --base-color-black: #000000;
     --base-color-bg: #FFFFFF;
+    --base-color-bg2: #F7F7F7;
     --base-color-shadow: #00000029;
 
     /*font weight*/
@@ -19,17 +21,17 @@
     --font-extra-bold: 800;
 
     /*font size*/
-    --font-size-h1: 49px;
-    --font-size-h2: 49px;
-    --font-size-h3: 36px;
-    --font-size-h4: 21px;
-    --font-size-h5: 20px;
-    --font-size-p-bigest: 26px;
-    --font-size-p-big: 16px;
-    --font-size-p-regular: 14px;
-    --font-size-p-small: 12px;
-    --font-size-p-smallest: 11px;
-    --font-size-nav-logo: 32px;
+    --font-size-h1: 4.9rem;
+    --font-size-h2: 4.9rem;
+    --font-size-h3: 3.6rem;
+    --font-size-h4: 2.1rem;
+    --font-size-h5: 2.0rem;
+    --font-size-p-bigest: 2.6rem;
+    --font-size-p-big: 1.6rem;
+    --font-size-p-regular: 1.4rem;
+    --font-size-p-small: 1.2rem;
+    --font-size-p-smallest: 1.1rem;
+    --font-size-nav-logo: 3.2rem;
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -273,4 +275,146 @@ p, a {
 }
 .statistic-page__section__box:nth-child(3) .page__section__box__title {
     margin-top: 11px;
+}
+.benefits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 106px 0;
+    height: auto;
+    background-color: var(--base-color-bg2);
+}
+.benefits .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:37px;
+}
+.benefits__box {
+    height: 370px;
+    width: 1124px;
+    background-color: var(--base-color-bg);
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 169px;
+    padding: 38px;
+}
+.right__section {
+    width: 416px;
+}
+.benefits__box__title {
+    font-size: var(--font-size-h3);
+    margin-bottom: 30px;
+}
+.benefits__box__description {
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-p-big);
+    margin-bottom: 50px;
+}
+.hr_style{
+    width: 327px;
+    height: 4px;
+    border: none;
+    outline: none;
+    background-color: #FB3B64;
+}
+.left__section {
+    position: relative;
+    align-self: flex-end;
+}
+.left__section::before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 41px;
+    background-color: #FB3B64;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) translate(-50%, 20%);
+}
+.benefits__box__img {
+    position: relative;
+    z-index: 2;
+    margin-right: 117px;
+}
+.left__section2 {
+    position: relative;
+}
+.left__section2::before {
+    width: 320px;
+    height: 320px;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--base-color-blue);
+    top: -5px;
+    z-index: 1;
+}
+.benefits__box__img2 {
+    position: relative;
+    width: 426px;
+    height: 328px;
+    z-index: 2;
+}
+.right__section2 {
+    width: 416px;
+}
+.benefits__box:nth-child(2) .hr_style {
+    background-color: var(--base-color-blue);
+}
+.benefits__box:nth-child(2) {
+    gap: 192px;
+}
+.benefits__box:nth-child(2) .benefits__box__title {
+    width: 260px;
+}
+/*section .benefits__box:nth-child(3) {*/
+/*    height: 370px;*/
+/*    width: 1124px;*/
+/*    background-color: none;*/
+/*    border: 1px solid #E8E9ED;*/
+/*    border-radius: 5px;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    gap: 169px;*/
+/*    padding: 38px;*/
+/*}*/
+.last__box {
+    height: 370px;
+    width: 1124px;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+.last__box__left {
+    width: 623px;
+    background-color: var(--base-color-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 35px 70px;
+}
+.last__box__right {
+    width: 440px;
+    background-color: #55DFB4;
+}
+.last__box__right, .last__box__left {
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+}
+.last__box__left .hr_style {
+    background-color: #55DFB4;
+}
+.last__box__left .benefits__box__title {
+    width: 370px;
+}
+.last__box__right {
+    padding: 98px 81px 64px 62px;
 }
