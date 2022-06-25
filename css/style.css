@@ -12,6 +12,10 @@
     --base-color-bg: #FFFFFF;
     --base-color-bg2: #F7F7F7;
     --base-color-shadow: #00000029;
+    --box-color-pink: #FB3B64;
+    --box-color-green: #55DFB4;
+    --box-color-blue: #07ACE6;
+    --box-color-shadow: #07ACE629;
 
     /*font weight*/
     --font-light: 300;
@@ -32,6 +36,7 @@
     --font-size-p-small: 1.2rem;
     --font-size-p-smallest: 1.1rem;
     --font-size-nav-logo: 3.2rem;
+    --font-size-price: 4.6rem;
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -248,7 +253,7 @@ p, a {
     left: 50%;
     transform: translateX(-75%);
     border-radius: 50%;
-    background-color: #FB3B64;
+    background-color: var(--box-color-pink);
     z-index: 3;
 }
 .statistic-page__section__box:nth-child(2)::before {
@@ -270,7 +275,7 @@ p, a {
     left: 50%;
     transform: translateX(-75%);
     border-radius: 50%;
-    background-color: #55DFB4;
+    background-color: var(--box-color-green);
     z-index: 3;
 }
 .statistic-page__section__box:nth-child(3) .page__section__box__title {
@@ -320,7 +325,7 @@ p, a {
     height: 4px;
     border: none;
     outline: none;
-    background-color: #FB3B64;
+    background-color: var(--box-color-pink);
 }
 .left__section {
     position: relative;
@@ -332,7 +337,7 @@ p, a {
     width: 180px;
     height: 180px;
     border-radius: 41px;
-    background-color: #FB3B64;
+    background-color: var(--box-color-pink);
     top: 0;
     right: 0;
     z-index: 1;
@@ -403,14 +408,14 @@ p, a {
 }
 .last__box__right {
     width: 440px;
-    background-color: #55DFB4;
+    background-color: var(--box-color-green);
 }
 .last__box__right, .last__box__left {
     border: 1px solid #E8E9ED;
     border-radius: 5px;
 }
 .last__box__left .hr_style {
-    background-color: #55DFB4;
+    background-color: var(--box-color-green);
 }
 .last__box__left .benefits__box__title {
     width: 370px;
@@ -425,6 +430,7 @@ p, a {
     background-color: var(--base-color-bg);
     width: 100%;
     padding-top: 100px;
+    padding-bottom: 100px; /*tuttaj usunac albo na margin zmienic*/
 }
 .pricing .container {
     display: flex;
@@ -432,19 +438,122 @@ p, a {
     flex-direction: column;
     width: 1266px;
     height: 616px;
-    border: 1px solid red;
 }
 .pricing__title {
     font-size: var(--font-size-h3);
     font-weight: var(--font-regular);
+    margin-bottom: 50px;
 }
 .pricing__container__box {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    gap: 58px;
 }
 .pricing__box {
     width: 372px;
     height: 461px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding-top: 34px;
+    flex-direction: column;
+}
+.pricing__box:nth-child(1) {
+    border: 1px solid var(--box-color-pink);
+}
+.pricing__box:nth-child(2) {
+    border: 1px solid var(--box-color-blue);
+    box-shadow: 5px 10px 27px var(--box-color-shadow);
+    font-size: var(--font-size-h4);
+    width: 405px;
+    height: 500px;
+}
+.pricing__box:nth-child(3) {
+    border: 1px solid var(--box-color-green);
+}
+.pricing__box__title {
+    font-weight: var(--font-bold);
+    font-size: var(--font-size-h5);
+    margin-bottom: 14px;
+}
+.pricing__box__price {
+    font-size: var(--font-size-price);
+    font-weight: var(--font-light);
+}
+.pricing__box:nth-child(1) .pricing__box__price {
+    color: var(--box-color-pink);
+}
+.pricing__box:nth-child(2) .pricing__box__price {
+    color: var(--box-color-blue);
+}
+.pricing__box:nth-child(3) .pricing__box__price {
+    color: var(--box-color-green);
+}
+.pricing__box__offer {
+    font-weight: var(--font-bold);
+    font-size: var(--font-size-p-small);
+    margin-top: 5px;
+}
+.pricing__box__list {
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-p-regular);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+.pricing__box__list li {
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-flex;
+}
+.pricing__box:nth-child(1) .pricing__box__list {
+    margin-top: 69px;
+}
+.pricing__box:nth-child(2) .pricing__box__list {
+    margin-top: 61px;
+}
+.pricing__box:nth-child(3) .pricing__box__list {
+    margin-top: 50px;
+}
+.pricing__box__list li::before { /* box */
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-21px);
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    border: 1px solid #55DFB4;
+}
+.pricing__box__list li::after { /* check or x */
+    font-family: "Font Awesome 5 Free";
+    content: '\f00c';
+    font-size: 0.5rem;
+    font-weight: bold;
+    position: absolute;
+    color: var(--box-color-green);
+    transform: translateY(calc(50% + 0.25rem)) translateX(calc(-50% - 12px - 3px));
+}
+.pricing__box:nth-child(1) li:nth-child(4)::after,
+.pricing__box:nth-child(1) li:nth-child(5)::after {
+    content: '\f00d';
+    color: var(--box-color-pink);
+    transform: translateY(calc(50% + 0.25rem)) translateX(calc(-50% - 12px - 3px))
+}
+.pricing__box:nth-child(1) .pricing__box__list li:nth-child(4)::before,
+.pricing__box:nth-child(1) .pricing__box__list li:nth-child(5)::before {
+    border: 1px solid var(--box-color-pink);
+}
+.pricing__box:nth-child(2) li:nth-child(5)::after {
+    content: '\f00d';
+    color: var(--box-color-pink);
+    transform: translateY(calc(50% + 0.25rem)) translateX(calc(-50% - 12px - 3px))
+}
+.pricing__box:nth-child(2) .pricing__box__list li:nth-child(5)::before {
+    border: 1px solid var(--box-color-pink);
 }
