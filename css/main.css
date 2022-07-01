@@ -826,6 +826,27 @@ label[for=name], label[for=email] {
   margin-right: 20px;
 }
 
+@media screen and (max-width: 500px) {
+  .home-page__primary-btn {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #08A6E4;
+    padding: 22px 92px;
+    border-radius: 40px;
+    text-decoration: none;
+  }
+  .home-page__description {
+    font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    margin-bottom: 60px;
+    text-align: center;
+    padding: 0 60px;
+    width: 370px;
+  }
+}
 @media screen and (max-width: 375px) {
   .container {
     min-width: 100%;
@@ -833,7 +854,6 @@ label[for=name], label[for=email] {
     justify-content: center;
     flex-direction: column;
   }
-  /* miejsce na menu mobile */
   .home-page {
     width: 100%;
   }
@@ -874,16 +894,6 @@ label[for=name], label[for=email] {
     margin-bottom: 60px;
     text-align: center;
     padding: 0 33px;
-  }
-  .home-page__primary-btn {
-    font-size: 16px;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-    color: #FFFFFF;
-    background-color: #08A6E4;
-    padding: 22px 92px;
-    border-radius: 40px;
-    text-decoration: none;
   }
   .home-page__img {
     min-width: 779px;
