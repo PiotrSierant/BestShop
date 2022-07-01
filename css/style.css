@@ -103,7 +103,6 @@ p, a {
     justify-content: center;
     list-style-type: none;
     height: 70px;
-    gap: 95px;
 }
 .header__nav__logo {
     font-size: var(--font-size-nav-logo);
@@ -116,18 +115,19 @@ p, a {
     justify-content: center;
     align-items: center;
 }
-.header__nav__element:hover {
-    border-bottom: 4px solid var(--base-color-blue);
-}
 .header__nav__element:hover .header__nav__link{
     color: var(--base-color-black);
-    transform: translateY(2px);
 }
 .header__nav__link {
     font-family: var(--font-family-2);
     font-size: var(--font-size-p-smallest);
     font-weight: var(--font-bold);
     color: var(--base-color-gray);
+    padding: 23px 40px;
+}
+.header__nav__link:hover {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid var(--base-color-blue);
 }
 .home-page {
     height: auto;

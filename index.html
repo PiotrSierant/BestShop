@@ -8,7 +8,8 @@
     <title>BestShop</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
           integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+<!--    <link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="#" type="image/svg+xml">
 </head>
 <body>
@@ -30,6 +31,12 @@
                         <a href="#contact" class="header__nav__link">CONTACT</a>
                     </li>
                 </ul>
+                <input type="checkbox" class="menu__btn" id="menu__btn">
+                <label for="menu__btn" class="menu__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
             </nav>
         </div>
     </header>
@@ -39,7 +46,10 @@
             <p class="home-page__description">Open shop on our platform and increase your sales</p>
             <a href="" class="home-page__primary-btn">Open your shop</a>
         </div>
-        <img src="../BestShop/images/Background.png" alt="" class="home-page__img">
+        <picture>
+            <source media="(max-width: 375px)" srcset="images/Background_mobile.png" class="home-page__img">
+            <img src="images/Background.png" alt="" class="home-page__img">
+        </picture>
     </section>
     <section class="statistic-page">
         <div class="container">
