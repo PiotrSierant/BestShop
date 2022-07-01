@@ -13,31 +13,17 @@
     <link rel="icon" href="#" type="image/svg+xml">
 </head>
 <body>
-     <header class="header" id="header">
-        <div class="container">
-            <nav class="header__nav">
-                <a href="#header" class="header__nav__logo">BestShop</a>
-                <ul class="header__nav__menu">
-                    <li class="header__nav__element">
-                        <a href="#header" class="header__nav__link">WHY US</a>
-                    </li>
-                    <li class="header__nav__element">
-                        <a href="#benefits" class="header__nav__link">BENEFITS</a>
-                    </li>
-                    <li class="header__nav__element">
-                        <a href="#prices" class="header__nav__link">PRICES</a>
-                    </li>
-                    <li class="header__nav__element">
-                        <a href="#contact" class="header__nav__link">CONTACT</a>
-                    </li>
-                </ul>
-                <input type="checkbox" class="menu__btn" id="menu__btn">
-                <label for="menu__btn" class="menu__toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </nav>
+    <header class="header">
+        <div class="container_header">
+        <a href="#" class="logo">BestShop</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="#stats">WHY US</a></li>
+                <li><a href="#benefits">BENEFITS</a></li>
+                <li><a href="#prices">PRICING</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
         </div>
     </header>
     <section class="home-page">
@@ -51,7 +37,7 @@
             <img src="images/Background.png" alt="" class="home-page__img">
         </picture>
     </section>
-    <section class="statistic-page">
+    <section class="statistic-page" id="stats">
         <div class="container">
             <h3 class="statistic-page__title">The most popular sales platform in country</h3>
             <section class="statistic-page__section">
@@ -164,10 +150,14 @@
                 <h2 class="contact__title">Any questions?</h2>
                 <p class="contact__description">Leave your email address or call us!</p>
                 <section class="contact__info">
+                    <div class="container__info">
                     <img src="images/Mail%20Icon.svg" alt="mail icon" class="mail-icon">
                     <p class="contact__info--text">info@bestshop.xyz</p>
+                    </div>
+                    <div class="container__info">
                     <img src="images/Phone%20Icon.svg" alt="phone icon" class="phone-icon">
                     <p  class="contact__info--text">123 456 789</p>
+                    </div>
                 </section>
             </section>
             <section class="right__section__contact">
