@@ -1,0 +1,44 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth; /* przewijanie strony */
+}
+
+body {
+  line-height: 1.5;
+  text-rendering: optimizeSpeed; /* dla szybszego renderowania lub optimizeLegibility dla dokładniejszego renderowanie tekstu */
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit; /* font dziedziczony */
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word; /*zawijanie wierszy */
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none; /*bez stylu listy dla ul,ol -> li */
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto; /*podkreślenie linków z przerwami na wystające litery takie jak p, y*/
+}
