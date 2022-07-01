@@ -648,6 +648,14 @@ a:not([class]) {
   text-decoration: none;
 }
 
+.pricing__container__box_mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 .contact {
   display: flex;
   justify-content: center;
@@ -664,13 +672,17 @@ a:not([class]) {
 }
 
 .left__section__contact {
-  width: 312px;
+  width: 345px;
 }
 
 .right__section__contact form {
   display: flex;
   flex-direction: column;
   width: auto;
+}
+
+.container__info {
+  display: flex;
 }
 
 .contact__title {
@@ -1251,6 +1263,7 @@ label[for=name], label[for=email] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
   .pricing__box__title {
     font-weight: 700;
@@ -1329,6 +1342,9 @@ label[for=name], label[for=email] {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+  .left__section__contact {
+    width: 100%;
   }
   .contact__title {
     font-size: 40px;

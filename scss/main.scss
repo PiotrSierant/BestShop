@@ -601,6 +601,13 @@
   transform: translateX(-50%);
   text-decoration: none;
 }
+.pricing__container__box_mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 .contact {
   display: flex;
   justify-content: center;
@@ -616,7 +623,7 @@
   }
 }
 .left__section__contact {
-  width: 312px;
+  width: 345px;
 }
 .right__section__contact {
   form {
@@ -624,6 +631,9 @@
     flex-direction: column;
     width: auto;
   }
+}
+.container__info {
+  display: flex;
 }
 .contact__title {
   font-size: $font-size-h2;
@@ -1108,7 +1118,6 @@ label[for="name"], label[for="email"] {
     width: 100%;
     padding-top: 100px;
     margin-bottom: 53px;
-
     .container {
       display: flex;
       align-items: center;
@@ -1144,7 +1153,6 @@ label[for="name"], label[for="email"] {
     padding-top: 25px;
     padding-bottom: 50px;
     flex-direction: row;
-
     &:nth-child(1) {
       border: 1px solid $box-color-pink;
 
@@ -1250,6 +1258,7 @@ label[for="name"], label[for="email"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
   .pricing__box__title {
     font-weight: $font-bold;
@@ -1332,6 +1341,9 @@ label[for="name"], label[for="email"] {
       justify-content: center;
       flex-direction: column;
     }
+  }
+  .left__section__contact {
+    width: 100%;
   }
   .contact__title {
     font-size: 40px;
