@@ -10,15 +10,10 @@
 @import "sections/all";
 // Pages (left side, right side and no side)
 @import "pages/all";
-/* FINISH RESET */
 /*start styling*/
-
 .container {
   min-width: 1352px;
 }
-
-/* header */
-
 .header {
   background-color: #fff;
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
@@ -26,7 +21,6 @@
   width: 100%;
   z-index: 3;
 }
-
 .header ul {
   margin: 0;
   padding: 0;
@@ -34,7 +28,6 @@
   overflow: hidden;
   background-color: #fff;
 }
-
 .header li a {
   display: block;
   text-decoration: none;
@@ -42,13 +35,11 @@
   color: $base-color-gray;
   padding: 10px 25px;
 }
-
 .header li a:hover,
 .header .menu-btn:hover {
   color: $base-color-black;
   font-weight: $font-bold;
 }
-
 .header .logo {
   display: block;
   float: left;
@@ -57,17 +48,11 @@
   text-decoration: none;
   color: $base-color-blue;
 }
-
-/* menu */
-
 .header .menu {
   clear: both;
   max-height: 0;
   transition: max-height 1s ease-out;
 }
-
-/* menu icon */
-
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
@@ -76,7 +61,6 @@
   position: relative;
   user-select: none;
 }
-
 .header .menu-icon .navicon {
   background: $base-color-blue;
   display: block;
@@ -85,7 +69,6 @@
   transition: background .2s ease-out;
   width: 18px;
 }
-
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
   background: $base-color-blue;
@@ -96,39 +79,29 @@
   transition: all .2s ease-out;
   width: 100%;
 }
-
 .header .menu-icon .navicon:before {
   top: 5px;
 }
-
 .header .menu-icon .navicon:after {
   top: -5px;
 }
-
-/* menu btn */
-
 .header .menu-btn {
   display: none;
   transition: all 1s ease-in-out;
 }
-
 .header .menu-btn:checked ~ .menu {
   max-height: 240px;
   transition: all 1s ease-in-out;
 }
-
 .header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
-
 .header .menu-btn:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
-
 .header .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
 }
-
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
@@ -152,9 +125,8 @@
   }
 }
 .home-page__img {
-  min-width: 1626px;
-  width: 1626px;
-  height: 594px;
+  width: 100%;
+  height: auto;
   position: relative;
   bottom: 0;
 }
@@ -760,7 +732,74 @@ label[for="name"], label[for="email"] {
     margin-right: 20px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .home-page__img {
+    min-width: 100%;
+    width: 100%;
+    min-height: 320px;
+    position: relative;
+    bottom: 0;
+  }
+  .statistic-page .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1024px;
+  }
+  .statistic-page__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 86px;
+    margin-bottom: 75px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .statistic-page__title {
+    max-width: 655px;
+    min-width: 375px;
+    width: 100%;
+    padding: 0 80px;
+    text-align: center;
+  }
+  .statistic-page__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: unset;
+    width: 100%;
+  }
+  .container {
+    max-width: 750px;
+    min-width: 500px;
+  }
+  .benefits__box {
+    min-height: 370px;
+    max-width: 750px;
+    min-width: 500px;
+    height: auto;
+    background-color: #FFFFFF;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+  }
+  .benefits {
+    width: 100%;
+    height: auto;
+  }
+}
 @media screen and (max-width: 500px ) {
+  .container {
+    min-width: 500px;
+  }
   .home-page__primary-btn {
     font-size: 16px;
     font-family: $font-family-2;
@@ -779,6 +818,32 @@ label[for="name"], label[for="email"] {
     text-align: center;
     padding: 0 60px;
     width: 370px;
+  }
+  .statistic-page .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+  }
+  .benefits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 42px 30px;
+    width: 100%;
+    height: auto;
+    background-color: $base-color-bg2;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      max-width: 750px;
+      width: 100%;
+      gap: 41px;
+    }
   }
 }
 @media screen and (max-width: 375px) {
@@ -808,13 +873,6 @@ label[for="name"], label[for="email"] {
       align-items: center;
       flex-grow: 1;
     }
-  }
-  .home-page__img {
-    min-width: 1626px;
-    width: 1626px;
-    height: 594px;
-    position: relative;
-    bottom: 0;
   }
   .home-page__title {
     font-size: 3.5rem;
@@ -873,88 +931,6 @@ label[for="name"], label[for="email"] {
     gap: 25px;
     margin-bottom: 50px;
   }
-  .statistic-page__section__box {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 160px;
-    height: 170px;
-    text-align: center;
-    position: relative;
-
-    &:nth-child(1) {
-      .page__section__box_img {
-        height: 52px;
-        width: 44px;
-        position: relative;
-        z-index: 4;
-        transform: translateX(15%);
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 62px;
-        height: 62px;
-        left: 50%;
-        transform: translateX(-75%);
-        border-radius: 50%;
-        background-color: $box-color-pink;
-        z-index: 3;
-      }
-    }
-
-    &:nth-child(2) {
-      .page__section__box_img {
-        height: 36px;
-        width: 65px;
-        position: relative;
-        z-index: 4;
-        margin-top: 16px;
-        transform: translateX(9%);
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 62px;
-        height: 62px;
-        left: 50%;
-        transform: translateX(-75%);
-        border-radius: 50%;
-        background-color: $base-color-blue;
-        z-index: 3;
-      }
-    }
-
-    &:nth-child(3) {
-      .page__section__box_img {
-        height: 48px;
-        width: 52px;
-        position: relative;
-        z-index: 4;
-        margin-top: 6px;
-        transform: translateX(20%);
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 62px;
-        height: 62px;
-        left: 50%;
-        transform: translateX(-75%);
-        border-radius: 50%;
-        background-color: $box-color-green;
-        z-index: 3;
-      }
-
-      .page__section__box__title {
-        margin-top: 11px;
-      }
-    }
-  }
   .page__section__box__title {
     font-size: $font-size-h5;
     font-weight: $font-extra-bold;
@@ -985,6 +961,7 @@ label[for="name"], label[for="email"] {
   }
   .benefits__box {
     min-height: 100px;
+    min-width: unset;
     height: auto;
     width: 100%;
     background-color: $base-color-bg;
@@ -1045,11 +1022,10 @@ label[for="name"], label[for="email"] {
   }
   .benefits__box__img {
     position: relative;
-    width: 192px;
+    width: 260px;
     z-index: 2;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 20px;
+    margin: 0 auto;
+    padding: 10px 20px;
   }
   .left__section2 {
     position: relative;
@@ -1282,42 +1258,6 @@ label[for="name"], label[for="email"] {
     font-weight: $font-bold;
     font-size: $font-size-p-small;
     margin-top: 0;
-  }
-  .pricing__box__list {
-    font-family: $font-family-2;
-    font-size: $font-size-p-regular;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style-type: none;
-
-    li {
-      margin-bottom: 20px;
-      position: relative;
-      display: inline-flex;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%) translateX(-21px);
-        width: 12px;
-        height: 12px;
-        border-radius: 2px;
-        border: 1px solid #55DFB4;
-      }
-
-      &::after {
-        font-family: "Font Awesome 5 Free", sans-serif;
-        content: '\f00c';
-        font-size: 0.5rem;
-        font-weight: bold;
-        position: absolute;
-        color: $box-color-green;
-        transform: translateY(calc(50% + 0.25rem)) translateX(calc(-50% - 12px - 3px));
-      }
-    }
   }
   .pricing__box__link {
     font-weight: $font-bold;
