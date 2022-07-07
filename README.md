@@ -1,8 +1,22 @@
 # BestShop
 
-
 * [CHECK THIS PAGE - CLICK ME](https://piotrsierant.github.io/BestShop/)
 
-Layout:
+I practiced:
+* HTML
+* CSS
+* RWD
+* SASS
 
-<img alt="Logo" src="https://github.com/PiotrSierant/BestShop/blob/main/images/component.png"/>
+Scroll down and check all layout.
+Layout desktop:
+
+<img alt="Logo" src="images/component.png"/>
+
+Layout tablet:
+
+<img alt="Logo" src="images/BestShop-tablet.png"/>
+
+Layout mobile:
+
+<img alt="Logo" src="images/BestShopMobile.png"/>
